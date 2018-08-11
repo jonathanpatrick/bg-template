@@ -1,0 +1,3 @@
+// export const GAIN_RESOURCE = "GAIN_RESOURCE";
+// export const LOSE_RESOURCE = "LOSE_RESOURCE";
+export const ALTER_RESOURCES = "ALTER_RESOURCES";
