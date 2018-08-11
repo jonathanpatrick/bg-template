@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card {
+	position: relative;
+	display: inline-block;
+	width: 172px;
+	height: 240px;
+	font: 16px 'Trebuchet MS';
+	
+	margin: 10px;
+	border-radius: 4px;
+	background: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.in-hand {
+  right: 30px;
+}
+
+.resource_clay {
+  background-image: url("./resources/clay.JPG");
+  background-repeat: no-repeat;
+  background-size: 95%;
+}
+.resource_lumber {
+  background-image: url("./resources/lumber.JPG");
+  background-repeat: no-repeat;
+  background-size: 95%;
+}
+.resource_ore {
+  background-image: url("./resources/ore.JPG");
+  background-repeat: no-repeat;
+  background-size: 95%;
+}
+.resource_wheat {
+  background-image: url("./resources/wheat.JPG");
+  background-repeat: no-repeat;
+  background-size: 95%;
+}
+.resource_wool {
+  background-image: url("./resources/wool.JPG");
+  background-repeat: no-repeat;
+  background-size: 95%;
+}
