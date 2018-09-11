@@ -1,29 +1,26 @@
 import { connect } from "react-redux";
-import { Player } from "../../shared/types/Player";
-import { ResourceDiff } from "../../shared/types/Resources";
-import Board from "./Board";
-//import { Hex } from "../../shared/types/Hex";
-//import { Node } from "../../shared/types/Node";
-import ResourceActions from "../actions/ResourceActions"
+// import { Player } from "../../shared/types/Player";
+
 import BoardActions from "../actions/BoardActions"
 import { RootState } from "../reducers/RootReducer";
 import { NodeModel } from "shared/types/Node";
+import Node from "./Node";
 
 interface StateProps {
-    activePlayer: Player;
-    // hexMap: Hex[][];
-    // nodeMap: Node[][];
+    node?: NodeModel;
+    position: string;
 }
 
 interface DispatchProps {
-    alterPlayerResources: (diff: ResourceDiff, pid: number) => void;
     modifyNode: (node: NodeModel) => void;
 }
 
 const mapStateToProps = (state: RootState, ownProps: any): StateProps => {
+    debugger;
     return {
 
-        activePlayer: state.players.players[0],
+        node: state.board.nodeMap[ownProps.x][ownProps.y],
+        position: ownProps.position
         // hexMap: state.bo,
         // nodeMap: 
     };
@@ -31,16 +28,13 @@ const mapStateToProps = (state: RootState, ownProps: any): StateProps => {
 
 function mapDispatchToProps(dispatch: any): DispatchProps {
     return {
-        alterPlayerResources(diff, pid) {
-            dispatch(ResourceActions.alterPlayerResources(diff, pid));
-        },
         modifyNode(node) {
             dispatch(BoardActions.modifyNode(node))
         }
     };
 }
 
-export type BoardProps = DispatchProps & StateProps;
+export type NodeProps = DispatchProps & StateProps;
 export default connect(mapStateToProps, mapDispatchToProps)(
-    Board
+    Node
 ) as any;
