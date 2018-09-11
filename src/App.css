@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -68,4 +68,176 @@
   background-image: url("./resources/wool.JPG");
   background-repeat: no-repeat;
   background-size: 95%;
+}
+
+.hex_clay {
+  background-image: url("./resources/clay.JPG");
+}
+.hex_lumber {
+  background-image: url("./resources/lumber.JPG");
+}
+.hex_ore {
+  background-image: url("./resources/ore.JPG");
+}
+.hex_wheat {
+  background-image: url("./resources/wheat.JPG");
+}
+.hex_wool {
+  background-image: url("./resources/wool.JPG");
+}
+
+.node {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+}
+
+.node_settlement {
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    display: inline-block;
+  
+}
+
+.board{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.board__row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.top {
+  top: -20px;
+}
+
+.top-middle {
+  top: -60%;
+  left: 43%
+}
+.right {
+  right: -12%;
+}
+
+.bottom {
+  bottom: -20px;
+}
+.bottom-middle {
+  bottom: -60%;
+  left: 43%;
+  background-color: black;
+}
+.left {
+  left: -12%;
+}
+
+.hexagon {
+  position: relative;
+  width: 200px;
+  height: 115.47px;
+  margin: 25px 5px;
+  background-size: auto 219.3931px;
+  background-position: center;
+  border-left: solid 5px #333;
+  border-right: solid 5px #333;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 141.42px;
+  height: 141.42px;
+  overflow: hidden;
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 24.29px;
+}
+
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 109.6965px;
+  transform: rotate(45deg) scaleY(1.7321) translateY(-54.84px);
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -70.7107px;
+  border-top: solid 7.0711px #333;
+  border-right: solid 7.0711px #333;
+  transition: all 1.4s;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -70.7107px;
+  border-bottom: solid 7.0711px #333;
+  border-left: solid 7.0711px #333;
+  transition: all 1.8s;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 2.8868px;
+  left: 0;
+  width: 190px;
+  height: 109.69px;
+  z-index: 2;
+  background: inherit;
+}
+
+/* SVG test
+ */
+ .hex {
+  cursor: pointer;
+  fill-opacity: 0.4;
+  stroke: #000;
+  stroke-width: 1;
+    transform: scale(1);
+  -webkit-transform: scale(1);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+
+#color-fill .hex {
+  fill: #ffff00;
+}
+
+.hex:hover {
+  fill-opacity: 1;
+  stroke: #ff0000;
+  stroke-width: 5;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+
+.hex {
+  
+  transition: transform, fill-opacity, stroke-width;
+  -webkit-transition: transform, fill-opacity, stroke-width;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
 }

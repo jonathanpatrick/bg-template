@@ -1,0 +1,4 @@
+export const CREATE_NODE = "CREATE_NODE";
+export const MODIFY_NODE = "MODIFY_NODE";
+export const INITIALIZE_NODE_MAP = "INITIALIZE_NODE_MAP";
+export const MODIFY_HEX = "MODIFY_HEX";
