@@ -71,19 +71,19 @@
 }
 
 .hex_clay {
-  background-image: url("./resources/clay.JPG");
+  fill: url("./resources/clay.JPG");
 }
 .hex_lumber {
-  background-image: url("./resources/lumber.JPG");
+  fill: url("./resources/lumber.JPG");
 }
 .hex_ore {
-  background-image: url("./resources/ore.JPG");
+  fill: url("./resources/ore.JPG");
 }
 .hex_wheat {
-  background-image: url("./resources/wheat.JPG");
+  fill: url("./resources/wheat.JPG");
 }
 .hex_wool {
-  background-image: url("./resources/wool.JPG");
+  fill: url("./resources/wool.JPG");
 }
 
 .node {
@@ -105,6 +105,7 @@
 }
 
 .board{
+  margin-top: 2.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,8 +229,8 @@
   fill-opacity: 1;
   stroke: #ff0000;
   stroke-width: 5;
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
   transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
 }
