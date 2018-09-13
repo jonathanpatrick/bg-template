@@ -221,9 +221,9 @@
   -webkit-transform-origin: 50% 50%;
 }
 
-#color-fill .hex {
+/* #color-fill .hex {
   fill: #ffff00;
-}
+} */
 
 .hex:hover {
   fill-opacity: 1;
